@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: #555;
+  background: #000;
   font-family: verdana, sans-serif;
 }
 
@@ -18,7 +18,12 @@ body {
 .header {
   margin: 1em 0;
 }
-
+.header img {
+  position: absolute;
+  top: -16em;
+  left: 0em;
+  opacity: 0.15;
+}
 .header .title {
   font-family: georgia, serif;
   font-variant: small-caps;
