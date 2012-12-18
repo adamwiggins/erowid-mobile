@@ -1,17 +1,14 @@
 body {
   margin: 0;
-  background: #000;
   font-family: verdana, sans-serif;
+  max-width: 320px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #fff),color-stop(0.8, #ccc));
 }
 
 #bodycontainer {
-  position: absolute;
-  left: 30%;
-  top: 0;
-  width: 320px;
-  border: 2px solid #888;
-  padding: 0 0.8em;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #fff),color-stop(1.0, #ccc));
+  padding: 0.1em 0.8em;
+  background: url('sun.png') no-repeat;
+  background-position: 0em -16em;
 }
 
 a {
@@ -22,13 +19,6 @@ a {
 .header {
   margin: 1em 0;
   font-family: georgia, serif;
-}
-
-.header img {
-  position: absolute;
-  top: -16em;
-  left: 0em;
-  opacity: 0.15;
 }
 
 .header .title {
@@ -50,6 +40,9 @@ a {
   padding: 0;
 }
 
+.header .description {
+  font-size: 90%;
+}
 .header .description a {
   font-size: 80%;
   margin-left: 0.5em;
