@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  background: #555;
+  font-family: verdana, sans-serif;
+}
+
+#bodycontainer {
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 320px;
+  height: 480px;
+  border: 2px solid #888;
+  padding: 0 0.8em;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.1, #ccc),color-stop(0.6, #fff));
+}
+
+.header {
+  margin: 1em 0;
+}
+
+.header .title {
+  font-family: georgia, serif;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  text-align: right;
+  margin-bottom: 1em;
+}
+.header .title h1 {
+  font-size: 2.8em;
+  margin: 0;
+  padding: 0;
+  margin-top: -0.15em;
+}
+.header .title h2 {
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 0;
+}
+
