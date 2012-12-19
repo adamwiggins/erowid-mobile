@@ -76,7 +76,7 @@ a {
   background: url('right-arrow.png') no-repeat;
   background-size: 0.6em;
   background-position: 100% 0.55em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
 .footer {
