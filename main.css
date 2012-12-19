@@ -107,8 +107,6 @@ a {
   font-variant: small-caps;
   text-transform: uppercase;
   text-align: center;
-  margin: 0;
-  margin-bottom: 1em;
   background: #000;
   color: #fff;
   padding: 0.2em;
@@ -120,12 +118,20 @@ a {
   margin: 0;
   padding: 0;
 }
+.smallheader h4 a {
+  color: #fff;
+}
 
 .substance {
+}
+.substance img {
+  width: 100%;
+  border-top: 3px solid #aaa;
 }
 .substance h1 {
   text-align: center;
   margin: 0;
+  padding: 0.8em 0;
 }
 .substance h2 {
   background: linear-gradient(top, #ccc, #888);
