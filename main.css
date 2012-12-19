@@ -1,3 +1,5 @@
+/*------- Homepage, and common to all pages */
+
 body {
   margin: 0;
   font-family: verdana, sans-serif;
@@ -6,7 +8,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #fff),color-stop(0.8, #aaa));
 }
 
-#bodycontainer {
+#homecontainer {
   padding: 0.1em 0.8em;
   background: url('sun.png') no-repeat;
   background-position: -18em -16em;
@@ -87,4 +89,53 @@ a {
   margin-top: 2em;
   font-size: 75%;
   text-align: center;
+}
+
+/*------- Psychoactive detail page */
+
+#bodycontainer {
+}
+
+.substance {
+}
+
+.smallheader {
+  font-family: georgia, serif;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1em;
+  background: #000;
+  color: #fff;
+  padding: 0.2em;
+  text-align: right;
+}
+.smallheader h4 {
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 0;
+}
+
+.substance {
+}
+.substance h1 {
+  text-align: center;
+  margin: 0;
+}
+.substance h2 {
+  background: linear-gradient(top, #ccc, #888);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #ccc),color-stop(1.0, #888));
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  margin: 0;
+  padding: 0.2em 0.5em;
+  font-size: 1em;
+  font-variant: small-caps;
+  font-weight: normal;
+}
+.substance p {
+  padding-left: 0.5em;
+  font-family: georgia, serif;
 }
