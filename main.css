@@ -4,6 +4,9 @@ body {
   margin: 0;
   font-family: verdana, sans-serif;
   max-width: 320px;
+}
+
+body#home {
   background: linear-gradient(top, #fff, #aaa);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #fff),color-stop(0.8, #aaa));
 }
