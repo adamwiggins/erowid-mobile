@@ -66,9 +66,17 @@ a {
 
 .browse ul {
   margin-top: 0;
+  padding: 0;
+  font-family: georgia, serif;
+  font-size: 1.2em;
 }
 .browse ul li {
   list-style-type: none;
+  padding: 0.3em 0;
+  background: url('right-arrow.png') no-repeat;
+  background-size: 0.6em;
+  background-position: 100% 0.55em;
+  border-bottom: 1px solid #ccc;
 }
 
 .footer {
