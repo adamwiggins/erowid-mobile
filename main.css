@@ -2,13 +2,14 @@ body {
   margin: 0;
   font-family: verdana, sans-serif;
   max-width: 320px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #fff),color-stop(0.8, #ccc));
+  background: linear-gradient(top, #fff, #aaa);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #fff),color-stop(0.8, #aaa));
 }
 
 #bodycontainer {
   padding: 0.1em 0.8em;
   background: url('sun.png') no-repeat;
-  background-position: 0em -16em;
+  background-position: -18em -16em;
 }
 
 a {
@@ -24,7 +25,7 @@ a {
 .header .title {
   font-variant: small-caps;
   text-transform: uppercase;
-  text-align: right;
+  text-align: center;
   margin-bottom: 1em;
 }
 .header .title h1 {
@@ -68,4 +69,10 @@ a {
 }
 .browse ul li {
   list-style-type: none;
+}
+
+.footer {
+  margin-top: 2em;
+  font-size: 75%;
+  text-align: center;
 }
