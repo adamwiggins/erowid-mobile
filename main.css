@@ -99,7 +99,7 @@ a {
 #bodycontainer {
 }
 
-.substance {
+.psychoactive {
 }
 
 .smallheader {
@@ -122,18 +122,18 @@ a {
   color: #fff;
 }
 
-.substance {
+.psychoactive {
 }
-.substance img {
+.psychoactive img {
   width: 100%;
   border-top: 3px solid #aaa;
 }
-.substance h1 {
+.psychoactive h1 {
   text-align: center;
   margin: 0;
   padding: 0.8em 0;
 }
-.substance h2 {
+.psychoactive h2 {
   background: linear-gradient(top, #ccc, #888);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #ccc),color-stop(1.0, #888));
   border-top: 1px solid #aaa;
@@ -144,7 +144,7 @@ a {
   font-variant: small-caps;
   font-weight: normal;
 }
-.substance p {
+.psychoactive p {
   padding-left: 0.5em;
   font-family: georgia, serif;
 }
