@@ -17,7 +17,7 @@
       setTimeout(function() { window.scrollTo(0, 0); }, 0);
 
       $('#searchform').submit(function() {
-        q = $('#query').val();
+        q = $.trim($('#query').val().toLowerCase());
         if (q == 'mdma') {
           window.location = 'mdma.html';
         }
