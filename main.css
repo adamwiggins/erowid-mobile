@@ -19,7 +19,6 @@ body#home {
 
 a {
   color: #000;
-  text-decoration: none;
 }
 
 .header {
@@ -52,8 +51,7 @@ a {
 .header .description a {
   font-size: 80%;
   margin-left: 0.5em;
-  color: #166;
-  border-bottom: 1px solid #588;
+  color: #666;
 }
 
 .search h4 {
@@ -86,6 +84,9 @@ a {
   background-size: 0.6em;
   background-position: 100% 0.55em;
   border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.browse a {
+  text-decoration: none;
 }
 
 .footer {
@@ -120,6 +121,7 @@ a {
 }
 .smallheader h4 a {
   color: #fff;
+  text-decoration: none;
 }
 
 .psychoactive {
