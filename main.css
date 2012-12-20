@@ -130,12 +130,24 @@ a {
   width: 100%;
   border-top: 3px solid #aaa;
 }
+.about img {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .psychoactive h1 {
   text-align: center;
   margin: 0;
   padding: 0.8em 0;
 }
-.psychoactive h2 {
+.about h1 {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+.psychoactive h2,
+.about h2 {
   background: linear-gradient(top, #ccc, #888);
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #ccc),color-stop(1.0, #888));
   border-top: 1px solid #aaa;
@@ -146,7 +158,8 @@ a {
   font-variant: small-caps;
   font-weight: normal;
 }
-.psychoactive p {
+.psychoactive p,
+.about p {
   padding-left: 0.5em;
   font-family: georgia, serif;
 }
