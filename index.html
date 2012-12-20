@@ -9,9 +9,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <link rel="apple-touch-icon" href="touch-icon.png">
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+
   <script type="text/javascript">
-    window.addEventListener("load",function() {
+    $(document).ready(function() {
+      // hide url bar on iOS browser
       setTimeout(function() { window.scrollTo(0, 0); }, 0);
+
+      $('#searchform').submit(function() {
+        q = $('#query').val();
+        if (q == 'mdma') {
+          window.location = 'mdma.html';
+        }
+        else {
+          window.location = 'https://www.google.com/#q=site:erowid.org+' + encodeURIComponent(q);
+        }
+        return false;
+      });
     });
   </script>
 </head>
@@ -31,8 +45,8 @@
 
 <div class="search">
   <h4>Search for a psychoactive:</h4>
-  <form action="#">
-  <input type="text" name="q" />
+  <form action="#" id="searchform">
+  <input type="text" name="q" id="query" />
   </form>
 </div>
 
