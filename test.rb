@@ -20,6 +20,8 @@ class ErowidScraperTest < Test::Unit::TestCase
     assert_match /psychotherapy/, @psychoactive.description
 
     assert_equal 'http://www.erowid.org/chemicals/mdma/images/mdma_summary1.jpg', @psychoactive.image_url
+
+    assert_equal "MDMA", JSON.parse(@psychoactive.to_json)['name']
   end
 
   def test_scrape_amantias

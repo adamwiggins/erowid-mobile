@@ -4,7 +4,17 @@ require 'json'
 
 require './erowid_scraper'
 
-set :port, ENV['PORT'] || 5000
+##### API
+
+get '/psychoactives/:id.json' do |id|
+  @psychoactive = ErowidScraper.scrape(id)
+  halt 404 unless @psychoactive
+
+  content_type :json
+  @psychoactive.to_json
+end
+
+##### Web
 
 get '/' do
   erb :home
@@ -20,6 +30,10 @@ get '/psychoactives/:id' do |id|
 
   erb :psychoactive
 end
+
+#### Config
+
+set :port, ENV['PORT'] || 5000
 
 error { erb :error }
 not_found { erb :not_found }

@@ -26,6 +26,20 @@ Deploy to Heroku:
     $ git push heroku master
     $ heroku open
 
+## API
+
+The app provides a faux JSON API based on scraped data.  Access like this:
+
+    $ curl http://localhost:5000/psychoactives/alcohol.json
+    {
+      "name": "Alcohol",
+      "common_names": "Liquor; Spirits; Beer; Wine",
+      "effects": "Depressant Intoxicant",
+      "chemical_name": "ethyl-alcohol",
+      "description": "Alcohol is one of the most common strong psychoactives used by humans.  It has a long history of use and its intoxicating effects are well-studied and -documented.",
+      "image_url": "http://www.erowid.org/chemicals/alcohol/images/alcohol_summary1.jpg"
+    }
+
 ## Meta
 
 Written by Adam Wiggins, released under the MIT license.

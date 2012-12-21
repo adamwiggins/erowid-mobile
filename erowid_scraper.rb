@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'restclient'
 require 'ostruct'
+require 'json'
 
 class ErowidScraper
   attr_reader :url
@@ -47,6 +48,17 @@ class ErowidScraper
 
   def image_url
     @url.gsub(/[^\/]+$/, '') + image_path
+  end
+
+  def to_json
+    JSON.pretty_generate(
+      :name => name,
+      :common_names => common_names,
+      :effects => effects,
+      :chemical_name => chemical_name,
+      :description => description,
+      :image_url => image_url
+    ) + "\n"
   end
 
   def self.common_psychoactives
