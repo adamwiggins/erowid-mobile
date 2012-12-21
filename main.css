@@ -8,13 +8,13 @@ body {
 
 body#home {
   background: linear-gradient(top, #fff, #aaa);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #fff),color-stop(0.8, #aaa));
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.2, #fff),color-stop(0.6, #aaa));
 }
 
 #homecontainer {
   padding: 0.1em 0.8em;
   background: url('sun.png') no-repeat;
-  background-position: -18em -16em;
+  background-position: 0.3em 0em;
 }
 
 a {
@@ -29,28 +29,39 @@ a {
 .header .title {
   font-variant: small-caps;
   text-transform: uppercase;
-  text-align: center;
   margin-bottom: 1em;
 }
+.header .title img {
+  width: 30%;
+  float: left;
+}
+.header .title div {
+  width: 65%;
+  float: left;
+  margin-top: 1.5em;
+  margin-left: 0.8em;
+}
 .header .title h1 {
-  font-size: 2.8em;
+  font-size: 2.5em;
   margin: 0;
   padding: 0;
   margin-top: -0.15em;
 }
 .header .title h2 {
   font-size: 1em;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   margin: 0;
   padding: 0;
 }
+.header .title hr {
+  clear: both;
+  visibility: hidden;
+}
 
 .header .description {
-  font-size: 90%;
 }
 .header .description a {
   font-size: 80%;
-  margin-left: 0.5em;
   color: #666;
 }
 
@@ -131,10 +142,12 @@ a {
   border-top: 3px solid #aaa;
 }
 .about img {
+  display: block;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .psychoactive h1 {
   text-align: center;
