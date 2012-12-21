@@ -5,12 +5,15 @@ require 'ostruct'
 class ErowidScraper
   attr_reader :url
 
-  class NoSuchPsychoactive < RuntimeError; end
+  def self.scrape(slug)
+    base_struct = common_psychoactives[slug]
+    return nil unless base_struct
 
-  def initialize(slug)
-    @base_struct = self.class.common_psychoactives[slug]
-    raise NoSuchPsychoactive unless @base_struct
+    new(base_struct)
+  end
 
+  def initialize(base_struct)
+    @base_struct = base_struct
     @url = 'http://www.erowid.org' + @base_struct.path
     puts "Scraping #{@url}"
     @page = Nokogiri::HTML(RestClient.get(@url))

@@ -5,13 +5,11 @@ require './erowid_scraper'
 
 class ErowidScraperTest < Test::Unit::TestCase
   def test_bad_slug
-    assert_raise ErowidScraper::NoSuchPsychoactive do
-      ErowidScraper.new('this-does-not-exist')
-    end
+    assert_nil ErowidScraper.scrape('this-does-not-exist')
   end
 
   def test_scrape_mdma
-    @psychoactive = ErowidScraper.new('mdma')
+    @psychoactive = ErowidScraper.scrape('mdma')
 
     assert_match /erowid.org/, @psychoactive.url
 
@@ -25,7 +23,7 @@ class ErowidScraperTest < Test::Unit::TestCase
   end
 
   def test_scrape_amantias
-    @psychoactive = ErowidScraper.new('amanitas')
+    @psychoactive = ErowidScraper.scrape('amanitas')
 
     assert_nil @psychoactive.chemical_name
   end

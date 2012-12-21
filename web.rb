@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'sinatra'
+require 'json'
 
 require './erowid_scraper'
 
@@ -14,7 +15,9 @@ get '/about' do
 end
 
 get '/psychoactives/:id' do |id|
-  @psychoactive = ErowidScraper.new(id)
+  @psychoactive = ErowidScraper.scrape(id)
+  halt 404 unless @psychoactive
+
   erb :psychoactive
 end
 
