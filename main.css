@@ -13,8 +13,6 @@ body#home {
 
 #homecontainer {
   padding: 0.1em 0.8em;
-  background: url('sun.png') no-repeat;
-  background-position: 0.3em 0em;
 }
 
 a {
@@ -63,6 +61,9 @@ a {
 .header .description a {
   font-size: 80%;
   color: #666;
+}
+.header .description p {
+  margin: 0;
 }
 
 .search h4 {
