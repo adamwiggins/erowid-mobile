@@ -60,38 +60,9 @@
 <div class="browse">
   <h4>Or browse popular psycoactives:</h4>
   <ul>
-    <li><a href="http://www.erowid.org/chemicals/alcohol/alcohol.shtml">Alcohol</a></li>
-    <li><a href="http://www.erowid.org/plants/amanitas/amanitas.shtml">Amanitas</a></li>
-    <li><a href="http://www.erowid.org/chemicals/amt/amt.shtml">AMT</a></li>
-    <li><a href="http://www.erowid.org/chemicals/ayahuasca/ayahuasca.shtml">Ayahuasca</a></li>
-    <li><a href="http://www.erowid.org/plants/cacti/cacti.shtml">Cacti</a></li>
-    <li><a href="http://www.erowid.org/chemicals/caffeine/caffeine.shtml">Caffeine</a></li>
-    <li><a href="http://www.erowid.org/plants/cannabis/cannabis.shtml">Cannabis</a></li>
-    <li><a href="http://www.erowid.org/chemicals/cocaine/cocaine.shtml">Cocaine</a></li>
-    <li><a href="http://www.erowid.org/plants/datura/datura.shtml">Datura</a></li>
-    <li><a href="http://www.erowid.org/chemicals/dmt/dmt.shtml">DMT</a></li>
-    <li><a href="http://www.erowid.org/chemicals/dxm/dxm.shtml">DXM</a></li>
-    <li><a href="http://www.erowid.org/chemicals/ghb/ghb.shtml">GHB</a></li>
-    <li><a href="http://www.erowid.org/chemicals/heroin/heroin.shtml">Heroin</a></li>
-    <li><a href="http://www.erowid.org/chemicals/inhalants/inhalants.shtml">Inhalants</a></li>
-    <li><a href="http://www.erowid.org/plants/kava/kava.shtml">Kava</a></li>
-    <li><a href="http://www.erowid.org/chemicals/ketamine/ketamine.shtml">Ketamine</a></li>
-    <li><a href="http://www.erowid.org/chemicals/lsd/lsd.shtml">LSD</a></li>
-    <li><a href="http://www.erowid.org/chemicals/maois/maois.shtml">MAOIs</a></li>
-    <li><a href="/psychoactives/mdma">MDMA (Ecstasy)</a></li>
-    <li><a href="http://www.erowid.org/chemicals/mescaline/mescaline.shtml">Mescaline</a></li>
-    <li><a href="http://www.erowid.org/chemicals/meth/meth.shtml">Meth</li>
-    <li><a href="http://www.erowid.org/plants/morning_glory/morning_glory.shtml">Morning Glory</a></li>
-    <li><a href="http://www.erowid.org/plants/mushrooms/mushrooms.shtml">Mushrooms</a></li>
-    <li><a href="http://www.erowid.org/chemicals/nitrous/nitrous.shtml">Nitrous</a></li>
-    <li><a href="http://www.erowid.org/plants/nutmeg/nutmeg.shtml">Nutmeg</a></li>
-    <li><a href="http://www.erowid.org/chemicals/opiates/opiates.shtml">Opiates</a></li>
-    <li><a href="http://www.erowid.org/plants/peyote/peyote.shtml">Peyote</a></li>
-    <li><a href="http://www.erowid.org/plants/salvia/salvia.shtml">Salvia</a></li>
-    <li><a href="http://www.erowid.org/plants/spice_product/spice_product.shtml">Spice Products</a></li>
-    <li><a href="http://www.erowid.org/plants/tobacco/tobacco.shtml">Tobacco</a></li>
-    <li><a href="http://www.erowid.org/chemicals/2cb/2cb.shtml">2C-B</a></li>
-    <li><a href="http://www.erowid.org/chemicals/5meo_dmt/5meo_dmt.shtml">5-MeO-DMT</a></li>
+    <% ErowidScraper.common_psychoactives.each do |psychoactive| %>
+      <li><a href="/psychoactives/<%= psychoactive.slug %>"><%= psychoactive.name %></a></li>
+    <% end %>
   </ul>
 </div>
 

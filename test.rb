@@ -17,4 +17,10 @@ class ErowidScraperTest < Test::Unit::TestCase
     assert_equal "3,4-methylenedioxymethamphetamine", p.chemical_name
     assert_match /psychotherapy/, p.description
   end
+
+  def test_common_psychoactives
+    assert_equal "Alcohol", ErowidScraper.common_psychoactives[0].name
+    assert_equal "alcohol", ErowidScraper.common_psychoactives[0].slug
+    assert_match /alcohol/, ErowidScraper.common_psychoactives[0].path
+  end
 end
