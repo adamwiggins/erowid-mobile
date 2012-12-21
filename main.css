@@ -19,6 +19,11 @@ a {
   color: #000;
 }
 
+p {
+  line-height: 1.4em;
+  color: #333;
+}
+
 .header {
   margin: 1em 0;
   font-family: georgia, serif;
@@ -57,9 +62,9 @@ a {
 }
 
 .header .description {
+  font-size: 90%;
 }
 .header .description a {
-  font-size: 80%;
   color: #666;
 }
 .header .description p {
@@ -123,13 +128,16 @@ a {
   background: #000;
   color: #fff;
   padding: 0.2em;
-  text-align: right;
+  text-align: center;
+  height: 1.2em;
+  border-top: 3px solid #aaa;
 }
 .smallheader h4 {
-  font-size: 0.6em;
+  font-size: 0.7em;
   letter-spacing: 0.2em;
   margin: 0;
   padding: 0;
+  padding-top: 0.3em;
 }
 .smallheader h4 a {
   color: #fff;
@@ -140,7 +148,8 @@ a {
 }
 .psychoactive img {
   width: 100%;
-  border-top: 3px solid #aaa;
+  border-top: 3px solid #888;
+  border-bottom: 3px solid #888;
 }
 .about img {
   display: block;
@@ -153,7 +162,12 @@ a {
 .psychoactive h1 {
   text-align: center;
   margin: 0;
-  padding: 0.8em 0;
+  padding: 0.3em 0;
+  background: linear-gradient(top, #ccc, #aaa);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa),color-stop(0.3, #ccc));
+  border-bottom: 3px solid #888;
+  margin-bottom: 0.3em;
+  text-shadow: 0.05em 0.05em #aaa;
 }
 .about h1 {
   text-align: center;
@@ -162,18 +176,14 @@ a {
 }
 .psychoactive h2,
 .about h2 {
-  background: linear-gradient(top, #ccc, #888);
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0, #ccc),color-stop(1.0, #888));
-  border-top: 1px solid #aaa;
-  border-bottom: 1px solid #aaa;
   margin: 0;
   padding: 0.2em 0.5em;
   font-size: 1em;
-  font-variant: small-caps;
-  font-weight: normal;
 }
 .psychoactive p,
 .about p {
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
   padding-left: 0.5em;
   font-family: georgia, serif;
 }
