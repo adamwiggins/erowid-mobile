@@ -78,7 +78,7 @@ p {
 .search input[type="text"] {
   width: 100%;
   border-radius: 1em;
-  background: url('search-icon.png') no-repeat scroll 7px 7px;
+  background: url('/search-icon.png') no-repeat scroll 7px 7px;
   background-size: auto 75%;
   background-position: 0.3em 0.1em;
   padding-left: 1.6em;
@@ -97,7 +97,7 @@ p {
 .browse ul li {
   list-style-type: none;
   padding: 0.3em 0;
-  background: url('right-arrow.png') no-repeat;
+  background: url('/right-arrow.png') no-repeat;
   background-size: 0.6em;
   background-position: 100% 0.55em;
   border-bottom: 1px solid rgba(0,0,0,0.15);

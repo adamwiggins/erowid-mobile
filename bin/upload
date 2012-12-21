@@ -1,5 +1,0 @@
-#!/bin/bash
-
-for i in *.html *.css *.png; do
-  s3 put $i erowid-mobile-mockup public_read
-done

@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Erowid</title>
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="/main.css">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <link rel="apple-touch-icon" href="touch-icon.png" />
+  <link rel="apple-touch-icon" href="/touch-icon.png" />
 
-	<link rel="shortcut icon" href="browser-icon.png" />
+	<link rel="shortcut icon" href="/browser-icon.png" />
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
 
@@ -21,7 +21,7 @@
       $('#searchform').submit(function() {
         q = $.trim($('#query').val().toLowerCase());
         if (q == 'mdma') {
-          window.location = 'mdma.html';
+          window.location = '/psychoactives/mdma';
         }
         else {
           window.location = 'https://www.google.com/#q=site:erowid.org+' + encodeURIComponent(q);
@@ -37,7 +37,7 @@
 
 <div class="header">
   <div class="title">
-    <img src="erowid-logo.png" />
+    <img src="/erowid-logo.png" />
     <div>
       <h2>The Vaults of</h2>
       <h1>Erowid</h1>
@@ -46,7 +46,7 @@
   </div>
   <div class="description">
     <p>Erowid provides factual information on psychoactive drugs to medical professionals, academics, and recreational users.</p>
-    <p><a href="about.html">Learn more &#8250;</a></p>
+    <p><a href="/about">Learn more &#8250;</a></p>
   </div>
 </div>
 
@@ -78,7 +78,7 @@
     <li><a href="http://www.erowid.org/chemicals/ketamine/ketamine.shtml">Ketamine</a></li>
     <li><a href="http://www.erowid.org/chemicals/lsd/lsd.shtml">LSD</a></li>
     <li><a href="http://www.erowid.org/chemicals/maois/maois.shtml">MAOIs</a></li>
-    <li><a href="mdma.html">MDMA (Ecstasy)</a></li>
+    <li><a href="/psychoactives/mdma">MDMA (Ecstasy)</a></li>
     <li><a href="http://www.erowid.org/chemicals/mescaline/mescaline.shtml">Mescaline</a></li>
     <li><a href="http://www.erowid.org/chemicals/meth/meth.shtml">Meth</li>
     <li><a href="http://www.erowid.org/plants/morning_glory/morning_glory.shtml">Morning Glory</a></li>
