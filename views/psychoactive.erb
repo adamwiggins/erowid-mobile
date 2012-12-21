@@ -26,7 +26,7 @@
 </a>
 
 <div class="psychoactive">
-  <img src="http://www.erowid.org/chemicals/mdma/images/mdma_summary1.jpg" />
+  <img src="<%= @psychoactive.image_url %>" alt="Photo of <%= @psychoactive.name %>" />
 
   <h1><%= @psychoactive.name %></h1>
 
@@ -40,7 +40,7 @@
   </div>
   <div class="chemicalname">
     <h2>Chemical Name</h2>
-    <p><%= @psychoactive.chemical_name %></p>
+    <p><%= @psychoactive.chemical_name || '<i>none</i>' %></p>
   </div>
   <div class="description">
     <h2>Description</h2>

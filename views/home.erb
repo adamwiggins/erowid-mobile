@@ -60,8 +60,8 @@
 <div class="browse">
   <h4>Or browse popular psycoactives:</h4>
   <ul>
-    <% ErowidScraper.common_psychoactives.each do |psychoactive| %>
-      <li><a href="/psychoactives/<%= psychoactive.slug %>"><%= psychoactive.name %></a></li>
+    <% ErowidScraper.common_psychoactives.each do |slug, psychoactive| %>
+      <li><a href="/psychoactives/<%= slug %>"><%= psychoactive.name %></a></li>
     <% end %>
   </ul>
 </div>

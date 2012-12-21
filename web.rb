@@ -17,3 +17,6 @@ get '/psychoactives/:id' do |id|
   @psychoactive = ErowidScraper.new(id)
   erb :psychoactive
 end
+
+error { erb :error }
+not_found { erb :not_found }
