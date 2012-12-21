@@ -1,7 +1,7 @@
 require 'bundler/setup'
 require 'test/unit'
 
-require './erowid-scraper'
+require './erowid_scraper'
 
 class ErowidScraperTest < Test::Unit::TestCase
   def test_bad_slug

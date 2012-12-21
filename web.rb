@@ -1,7 +1,7 @@
 require 'bundler/setup'
 require 'sinatra'
 
-require './erowid-scraper'
+require './erowid_scraper'
 
 set :port, ENV['PORT'] || 5000
 
