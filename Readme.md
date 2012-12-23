@@ -1,6 +1,6 @@
-# Erowid mobile site mockup
+# Erowid mobile site prototype
 
-This is a mockup of a mobile site for the drug information site erowid.org.
+This is a prototype of a possible mobile site design for Erowid.org.
 
 ## Run locally
 
