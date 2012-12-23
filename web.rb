@@ -5,6 +5,8 @@ require 'uri'
 
 require './erowid_scraper'
 
+STDOUT.sync = STDERR.sync = true
+
 ##### API
 
 get '/psychoactives/:id.json' do |id|
@@ -33,6 +35,8 @@ get '/psychoactives/:id' do |id|
 end
 
 get '/search' do
+  log :search, :q => params[:q]
+
   if slug = ErowidScraper.search(params[:q])
     redirect "/psychoactives/#{slug}"
   else
@@ -40,9 +44,28 @@ get '/search' do
   end
 end
 
+#### Helpers
+
+def log(event, args={})
+  kv = args.map do |key, value|
+    "#{key}=#{value.gsub("'", %q(\\\'))}"
+  end
+
+  msg = "event_#{event} " + kv.join(' ')
+
+  puts msg
+end
+
 #### Config
 
 set :port, ENV['PORT'] || 5000
 
-error { erb :error }
-not_found { erb :not_found }
+not_found do
+  log :page_not_found
+  erb :not_found
+end
+
+error do
+  log(:error, :error => env['sinatra.error'].name, :msg => env['sinatra.error'].message)
+  erb :error
+end
