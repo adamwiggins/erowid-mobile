@@ -59,6 +59,7 @@ end
 #### Config
 
 set :port, ENV['PORT'] || 5000
+set :environment, ENV["PRODUCTION"] ? :production : :development
 
 not_found do
   log :page_not_found
