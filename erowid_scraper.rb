@@ -97,4 +97,20 @@ class ErowidScraper
       '5-meo-dmt' => OpenStruct.new(:name => '5-MeO-DMT', :slug => '5-meo-dmt', :path => '/chemicals/5meo_dmt/5meo_dmt.shtml')
     }
   end
+
+  def self.tokenize(str)
+    str.downcase.gsub(/[^a-z0-9 ]/, '').gsub(/^ +/, '').gsub(/ +$/, '').squeeze(' ')
+  end
+
+  def self.search(q)
+    q = tokenize(q)
+
+    common_psychoactives.each do |slug, psychoactive|
+      if tokenize(psychoactive.name).match(q)
+        return slug
+      end
+    end
+
+    nil
+  end
 end

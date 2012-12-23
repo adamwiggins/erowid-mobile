@@ -1,6 +1,7 @@
 require 'bundler/setup'
 require 'sinatra'
 require 'json'
+require 'uri'
 
 require './erowid_scraper'
 
@@ -29,6 +30,14 @@ get '/psychoactives/:id' do |id|
   halt 404 unless @psychoactive
 
   erb :psychoactive
+end
+
+get '/search' do
+  if slug = ErowidScraper.search(params[:q])
+    redirect "/psychoactives/#{slug}"
+  else
+    redirect "https://www.google.com/#q=" + URI.encode("site:erowid.org #{params[:q]}")
+  end
 end
 
 #### Config

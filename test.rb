@@ -35,4 +35,16 @@ class ErowidScraperTest < Test::Unit::TestCase
     assert_equal "alcohol", ErowidScraper.common_psychoactives['alcohol'].slug
     assert_match /alcohol/, ErowidScraper.common_psychoactives['alcohol'].path
   end
+
+  def test_tokenize
+    assert_equal "5meodmt", ErowidScraper.tokenize("5-MeO-DMT")
+    assert_equal "mdma ecstasy", ErowidScraper.tokenize("MDMA (Ecstasy)")
+    assert_equal "one two", ErowidScraper.tokenize("  one   two   ")
+  end
+
+  def test_search
+    assert_equal 'morning-glory', ErowidScraper.search('glory')
+    assert_equal '2c-b', ErowidScraper.search('2cb')
+    assert_equal 'mushrooms', ErowidScraper.search('shrooms')
+  end
 end

@@ -17,17 +17,6 @@
     $(document).ready(function() {
       // hide url bar on iOS browser
       setTimeout(function() { window.scrollTo(0, 0); }, 0);
-
-      $('#searchform').submit(function() {
-        q = $.trim($('#query').val().toLowerCase());
-        if (q == 'mdma') {
-          window.location = '/psychoactives/mdma';
-        }
-        else {
-          window.location = 'https://www.google.com/#q=site:erowid.org+' + encodeURIComponent(q);
-        }
-        return false;
-      });
     });
   </script>
 </head>
@@ -52,8 +41,8 @@
 
 <div class="search">
   <h4>Search for a psychoactive:</h4>
-  <form action="#" id="searchform">
-  <input type="text" name="q" id="query" />
+  <form action="/search" method="get">
+    <input type="text" name="q" />
   </form>
 </div>
 
