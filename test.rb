@@ -13,7 +13,7 @@ class ErowidScraperTest < Test::Unit::TestCase
 
     assert_match /erowid.org/, @psychoactive.url
 
-    assert_equal "MDMA", @psychoactive.name
+    assert_equal "MDMA (Ecstasy)", @psychoactive.name
     assert_match /XTC/, @psychoactive.common_names
     assert_match /Empathogen/, @psychoactive.effects
     assert_equal "3,4-methylenedioxymethamphetamine", @psychoactive.chemical_name
@@ -21,12 +21,13 @@ class ErowidScraperTest < Test::Unit::TestCase
 
     assert_equal 'http://www.erowid.org/chemicals/mdma/images/mdma_summary1.jpg', @psychoactive.image_url
 
-    assert_equal "MDMA", JSON.parse(@psychoactive.to_json)['name']
+    assert_equal "MDMA (Ecstasy)", JSON.parse(@psychoactive.to_json)['name']
   end
 
   def test_scrape_amantias
     @psychoactive = ErowidScraper.scrape('amanitas')
 
+    assert_equal "Amanitas", @psychoactive.name
     assert_nil @psychoactive.chemical_name
   end
 

@@ -23,7 +23,7 @@ class ErowidScraper
   end
 
   def name
-    @page.css('div.ts-substance-name')[0].text
+    @base_struct.name
   end
 
   def common_names
