@@ -27,7 +27,7 @@
   <h4>Or browse popular psycoactives:</h4>
   <ul>
     <% ErowidScraper.common_psychoactives.each do |slug, psychoactive| %>
-      <a href="/psychoactives/<%= slug %>"><li><%= psychoactive.name %></li></a>
+      <a href="/psychoactives/<%= slug %>"><li><%= psychoactive.name %><span>&#8250;</span></li></a>
     <% end %>
   </ul>
 </div>

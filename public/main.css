@@ -96,10 +96,13 @@ p {
 .browse ul li {
   list-style-type: none;
   padding: 0.3em 0;
-  background: url('/right-arrow.png') no-repeat;
-  background-size: 0.6em;
-  background-position: 100% 0.55em;
   border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.browse ul li span {
+  display: block;
+  float: right;
+  opacity: 0.5;
+  font-size: 1.3em;
 }
 .browse a {
   text-decoration: none;
